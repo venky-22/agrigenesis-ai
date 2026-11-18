@@ -1,0 +1,24 @@
+<section id="guard" data-transition="fade">
+<p class="eyebrow">Agentic AI · the heart of AgriGenesis</p>
+<h2 class="title">How the AI agent plans Sam’s farm</h2>
+<p class="soft" style="font-size:30px; margin-top:20px;">It runs its own research: picks tools, reads the results, decides what to check next, then reviews and fixes its own work.</p>
+<div style="display:flex; align-items:stretch; justify-content:space-between; margin-top:44px;">
+<div class="card rise" style="--i:0; width:284px; display:flex; flex-direction:column; gap:14px; padding:28px;"><p class="num">1</p><h3>Goal</h3><p class="label soft">Sam’s land and goals: income, part-time, under $5,000</p></div>
+<x-connector head="end" style="width:44px; height:2px; align-self:center; color:#5FD38D; border-width:4px;"></x-connector>
+<div class="card rise" style="--i:1; width:284px; display:flex; flex-direction:column; gap:14px; padding:28px;"><p class="num">2</p><h3>Decide</h3><p class="label soft">Picks the next tool and says why, live on screen</p></div>
+<x-connector head="end" style="width:44px; height:2px; align-self:center; color:#5FD38D; border-width:4px;"></x-connector>
+<div class="card rise" style="--i:2; width:284px; display:flex; flex-direction:column; gap:14px; padding:28px;"><p class="num">3</p><h3>Act</h3><p class="label soft">Calls 1 of 9 tools: frost, soil, slope, NASA, land use, forecast, crops</p></div>
+<x-connector head="end" style="width:44px; height:2px; align-self:center; color:#5FD38D; border-width:4px;"></x-connector>
+<div class="card rise" style="--i:3; width:284px; display:flex; flex-direction:column; gap:14px; padding:28px;"><p class="num">4</p><h3>Observe</h3><p class="label soft">Reads the real data and loops back to decide, up to 12 rounds</p></div>
+<x-connector head="end" style="width:44px; height:2px; align-self:center; color:#5FD38D; border-width:4px;"></x-connector>
+<div class="card rise" style="--i:4; width:284px; display:flex; flex-direction:column; gap:14px; padding:28px; border-color:#F2B84B;"><p class="num" style="background:#F2B84B;">5</p><h3>Reflect</h3><p class="label soft">A fact-checker tests the plan; the agent rewrites what was wrong</p></div>
+</div>
+<div style="flex:1"></div>
+<div class="rise" style="--i:5; display:grid; grid-template-columns:repeat(3, 1fr); gap:40px;">
+<p style="font-size:26px;"><b class="hl">Memory.</b> <span class="soft">The plan’s facts carry into Climate Risk and Crop Care, so their AI answers stay grounded.</span></p>
+<p style="font-size:26px;"><b class="hl">Guardrails.</b> <span class="soft">It can’t finish early: skip a check and the system sends it back.</span></p>
+<p style="font-size:26px;"><b class="hl">Reliable picks.</b> <span class="soft">Crops are scored by fixed rules, so the same land always gets the same advice. The AI runs the research and writes the plan.</span></p>
+</div>
+<div class="foot"><p>Gemma 4 31B with function calling · src/agent/agent.js</p><p class="pg"></p></div>
+<aside>Venkateshwaran: This is the agentic part. The agent gets Sam’s land and goals as its goal. It decides which tool to call next and gives a reason, shown live on screen. It calls one of nine tools that fetch real data, reads the result, and decides what to check next, for up to twelve rounds. If it tries to write the plan before every core check is done, the system sends it back. Then a fact-checker tests its plan against the data, and the agent corrects its own mistakes. The plan’s facts are its memory, carried into Climate Risk and Crop Care.</aside>
+</section>

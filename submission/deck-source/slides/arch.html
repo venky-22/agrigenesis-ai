@@ -1,0 +1,44 @@
+<section id="arch" class="light" data-transition="fade">
+<p class="eyebrow">Architecture</p>
+<h2 class="title">How AgriGenesis AI is built</h2>
+<div style="display:flex; align-items:center; justify-content:space-between; margin-top:44px; flex:1;">
+<div class="card rise" style="--i:0; width:360px; display:flex; flex-direction:column; gap:16px;">
+<h3>Farmer’s browser</h3>
+<p class="label soft">React 19 + Vite, works on a phone</p>
+<p class="pill" style="text-align:center;">1 · Plan Farm</p>
+<p class="pill" style="text-align:center;">2 · Climate Risk</p>
+<p class="pill" style="text-align:center;">3 · Crop Care</p>
+<p class="label soft">The saved plan’s facts flow into Features 2 and 3</p>
+</div>
+<x-connector head="both" style="width:64px; height:2px; color:#1D6B40; border-width:4px;"></x-connector>
+<div class="card rise" style="--i:1; width:500px; display:flex; flex-direction:column; gap:18px;">
+<h3>Agent core</h3>
+<p class="label"><b>Agent loop</b><br><span class="soft">calls the data tools; must run every core check before it may write</span></p>
+<p class="label"><b>Crop rules</b><br><span class="soft">rank 14 Nova Scotia crops, set plot sizes</span></p>
+<p class="label"><b>Economics</b><br><span class="soft">Statistics Canada income, published costs</span></p>
+<p class="label"><b>Fact-checker</b><br><span class="soft">checks the AI’s plan against the data; one self-correction</span></p>
+</div>
+<x-connector head="both" style="width:64px; height:2px; color:#1D6B40; border-width:4px;"></x-connector>
+<div style="width:600px; display:flex; flex-direction:column; gap:24px;">
+<div class="card rise" style="--i:2; background:var(--ink); border-color:var(--ink); color:var(--text-d);">
+<h3>AI model</h3>
+<p class="label" style="margin-top:12px; color:#A9C2B2;">Gemma 4 31B via Adaption: tool calling, text and images. The key stays on the server.</p>
+</div>
+<div class="card rise" style="--i:3;">
+<h3>Real public data · free, no key</h3>
+<div style="display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; margin-top:14px;">
+<p class="label soft">ECCC climate</p>
+<p class="label soft">Open-Meteo</p>
+<p class="label soft">AAFC soil grids</p>
+<p class="label soft">NASA MODIS NDVI</p>
+<p class="label soft">AAFC crop maps</p>
+<p class="label soft">NS land registry</p>
+<p class="label soft">Statistics Canada</p>
+<p class="label soft">Copernicus DEM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="foot"><p>Source code: <a href="https://github.com/venky-22/agrigenesis-ai" style="color:inherit;">github.com/venky-22/agrigenesis-ai</a></p><p class="pg"></p></div>
+<aside>The browser app has three features that share one saved plan. The agent core runs the tool loop, the fixed crop rules, Statistics Canada economics and the fact-checker. The AI model is Gemma 4 31B through the Adaption API, behind a server proxy so the key never reaches the browser. Every fact comes from free public data: Environment Canada, Open-Meteo, Agriculture Canada, NASA, the Nova Scotia property registry and Statistics Canada.</aside>
+</section>
